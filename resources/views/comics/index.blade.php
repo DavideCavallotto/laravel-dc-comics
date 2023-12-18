@@ -10,7 +10,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="{{$comic->image}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$comic->title}}</h5>                  
+                  <h5 class="card-title"><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></h5>                  
                   <p class="card-text">{{$comic->series}}</p>
                   <p class="card-text">{{$comic->type}}</p>
                   <p class="card-text">{{$comic->sale_date}}</p>
@@ -21,7 +21,11 @@
                 
         </div>
         @endforeach
-    </div>   
+    </div> 
+    <div class="text-center my-5">
+        <button><a href="{{route('index')}}">Home</a></button>  
+
+    </div>
 
 
 </section>
