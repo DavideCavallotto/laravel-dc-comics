@@ -23,7 +23,8 @@
         @endforeach
     </div> 
     <div class="text-center my-5">
-        <button><a href="{{route('index')}}">Home</a></button>  
+        <button><a href="{{route('index')}}">Home</a></button>
+        <button><a href="{{route('comics.create')}}">Aggiungi Fumetto</a></button>    
 
     </div>
 
