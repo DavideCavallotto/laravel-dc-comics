@@ -2,7 +2,9 @@
 @section('content')
 
 <section class="container text-center">
-<form action="POST">
+<form action="{{route('comics.store')}}" method="POST">
+    @csrf
+    
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
         <input type="text" class="form-control" name="title" id="title" placeholder="Aggiungi un titolo">
@@ -30,6 +32,10 @@
     <div class="mb-3">
         <label for="type" class="form-label">Tipologia</label>
         <input type="text" class="form-control" name="type" id="type" placeholder="Aggiungi la tipologia">
+    </div>
+
+    <div>
+        <input type="submit" class="btn btn-primary" value="Aggiungi">
     </div>
     
 
