@@ -11,9 +11,11 @@ class ComicController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() 
     {
-        //
+        $comics = Comic::all();
+
+        return view('comics.index', compact('comics'));
     }
 
     /**

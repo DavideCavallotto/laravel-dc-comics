@@ -13,5 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\Guest\PageController;
+use App\Http\Controllers\ComicController;
 
 Route::get('/', [PageController::class, 'index'])->name('index');
+
+
+// CRUD Comics
+
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
