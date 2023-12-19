@@ -34,7 +34,9 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
-        dd($data);
+        $new_comic = Comic::create($data);
+
+        return redirect()->route('comics.show', $new_comic->id);
     }
 
     /**
@@ -45,6 +47,20 @@ class ComicController extends Controller
         $comic = Comic::findOrFail($id);
 
         return view('comics.show', compact('comic'));
+    }
+
+    public function edit(Comic $comic) {
+        return view('comics.edit', compact('comic'));
+    }
+
+    public function update(Request $request, Comic $comic) {
+
+        $data = $request->all();
+
+        $comic->update($data);
+        // dd($data, $comic);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
 }  

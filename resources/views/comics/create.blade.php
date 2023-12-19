@@ -40,6 +40,10 @@
     
 
 </form>
+<div class="text-center">
+    <button><a href="{{route('comics.index')}}">Torna al Catalogo</a></button>
+
+</div>
 
 @endsection
 
