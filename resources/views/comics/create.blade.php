@@ -4,6 +4,8 @@
 <section class="container text-center">
 <form action="{{route('comics.store')}}" method="POST">
     @csrf
+
+  
     
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
