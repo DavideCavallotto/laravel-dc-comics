@@ -4,9 +4,9 @@
 @section('content')
 <h1 class="text-center">Catalogo Fumetti</h1>    
 <section class="container">
-    <div class="row">
+    <div class="row justify-content-center align-content-center">
         @foreach ($comics as $comic)
-        <div class="col-sm-3 mb-4">
+        <div class="col-3 mb-4" >
             <div class="card h-100" style="width: 18rem;">
                 <img src="{{$comic->image}}" class="card-img-top" alt="...">
                 <div class="card-body d-flex flex-column justify-content-end">
