@@ -4,6 +4,11 @@
 @section('content')
 <h1 class="text-center">Catalogo Fumetti</h1>    
 <section class="container">
+    @if(session('success'))
+    <div class="alert alert-success text-center">
+        {{ session('success') }}
+    </div>
+    @endif
     <div class="row justify-content-center align-content-center">
         @foreach ($comics as $comic)
         <div class="col-3 mb-4" >
